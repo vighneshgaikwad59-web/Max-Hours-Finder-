@@ -1,13 +1,13 @@
-mera=[("Sonu",300),("abhi",500)]
-def My_list(mera):
-    hours=0
-    montly=""
-    for name,worker in mera:
-       if worker>hours:
-        hours=worker
-        montly=name
-    return(hours,montly)
-print(My_list(mera))
-hours,name=(My_list(mera))
-print(hours)
-print(name)
+mera = [("Sonu", 300), ("abhi", 500), ("Ravi", 500)]  
+
+def max_hours_worker(workers):
+    max_hours = 0
+    top_worker = ""
+    for name, hrs in workers:
+        if hrs > max_hours:
+            max_hours = hrs
+            top_worker = name
+    return max_hours, top_worker
+
+hours, name = max_hours_worker(mera)
+print(f"{name} worked the most: {hours} hours")
